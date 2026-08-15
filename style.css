@@ -29,6 +29,7 @@ body {
   color: var(--text-dark);
   line-height: 1.7;
   overflow-x: hidden;
+  overflow-x: clip;
   padding-top: 80px; /* Offset for fixed header */
 }
 
@@ -50,7 +51,8 @@ a {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
   position: relative;
   display: flex;
   align-items: center;
@@ -551,6 +553,32 @@ a {
   z-index: 10;
 }
 
+/* Consult CTA */
+.service-consult-cta {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: rgba(255, 246, 222, 0.5);
+  border-radius: 15px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  border: 1px solid rgba(29, 93, 155, 0.1);
+}
+
+.consult-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(117, 194, 246, 0.5);
+  text-underline-offset: 4px;
+  transition: all 0.3s ease;
+}
+
+.consult-link:hover {
+  color: var(--secondary);
+  text-decoration-color: var(--secondary);
+}
+
 /* Center Stage Content Area */
 .services-center-stage {
   background-color: #111111;
@@ -829,6 +857,57 @@ a {
   .center-testimonial-card p {
     font-size: 0.88rem;
   }
+}
+
+/* Photo Gallery Section */
+.photo-gallery-section {
+  margin: 6rem 0 4rem 0;
+  overflow: hidden;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2.5rem;
+  padding: 10px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scroll-marquee 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(29, 93, 155, 0.1);
+  aspect-ratio: 4 / 3;
+  width: 300px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); }
 }
 
 /* Hotel Section Glassmorphism */
@@ -1170,16 +1249,54 @@ a {
   color: #ffffff;
 }
 
-.footer h2 {
-  font-size: 2.5rem;
+.footer-contact-header {
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer-logo i {
   color: var(--accent);
+}
+
+.footer-eyebrow {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+}
+
+.footer-contact-text {
+  color: var(--text-muted-light);
+  font-size: 1.15rem;
+  max-width: 600px;
+  line-height: 1.8;
+  margin: 0 auto;
 }
 
 .contact-info {
   list-style: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.2rem;
   font-size: 1.2rem;
   color: var(--text-muted-light);
@@ -1270,6 +1387,10 @@ a {
     text-align: center;
     line-height: 1.4;
   }
+
+  .footer {
+    padding-bottom: 150px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1324,30 +1445,43 @@ a {
     white-space: nowrap;
   }
 
-  /* Header Mobile Miniature Scaling */
+  /* Header Mobile Fixes */
   .main-header {
-    height: 12vw;
-    min-height: 50px;
+    position: relative;
+    height: auto;
+    min-height: auto;
+    padding: 15px 0;
+  }
+  
+  body {
+    padding-top: 0;
   }
   
   .header-container {
+    flex-direction: column;
+    gap: 12px;
     padding: 0 4vw;
   }
   
   .logo {
-    font-size: 3.5vw;
-    gap: 1vw;
+    font-size: 5vw;
+    gap: 1.5vw;
   }
   
   .logo i {
-    font-size: 4.5vw;
+    font-size: 6vw;
   }
   
   .main-nav ul {
-    gap: 3vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
   }
   
   .main-nav a {
-    font-size: 2.5vw;
+    font-size: 3.5vw;
+    padding: 6px 12px;
+    background: rgba(29, 93, 155, 0.08);
+    border-radius: 20px;
   }
 }

@@ -23,7 +23,7 @@
         <ul>
           <li><a href="#about">Hakkımda</a></li>
           <li><a href="#services">Eğitimlerimiz</a></li>
-          <li><a href="#hotel">Otel</a></li>
+          <li><a href="#hotel">Otel (Yakında)</a></li>
           <li><a href="#footer">İletişim</a></li>
         </ul>
       </nav>
@@ -37,7 +37,7 @@
       <h2 class="hero-subtitle">İzmir Profesyonel Köpek Eğitimi ve Otel Hizmeti</h2>
       <div class="hero-ctas">
         <a href="#services" class="btn-glass" data-aos="fade-up" data-aos-delay="600">Eğitimlerimiz</a>
-        <a href="#hotel" class="btn-glass" data-aos="fade-up" data-aos-delay="700">Otel Hizmetleri</a>
+        <a href="#hotel" class="btn-glass" data-aos="fade-up" data-aos-delay="700">Otel Hizmetleri (Yakında)</a>
       </div>
       <div class="hero-promo-wrapper" data-aos="zoom-in" data-aos-delay="900">
         <a href="#footer" class="btn-promo-pulse"><i class="fas fa-person-walking-with-dog"></i> Ücretsiz Tuvalet Eğitimi'ne Katıl!</a>
@@ -210,13 +210,42 @@
         </div>
       </div>
 
+      <!-- Free Consult CTA -->
+      <div class="service-consult-cta" data-aos="fade-up">
+        <p>Hangi hizmetin uygun olduğundan emin değil misiniz? <a href="#contact-info-section" class="consult-link">Birlikte karar vermek için 20 dakikalık ücretsiz görüşme randevusu alın.</a></p>
+      </div>
+
+      <!-- Part 1.5: Photo Gallery -->
+      <div id="gallery" class="photo-gallery-section" data-aos="fade-up">
+        <div class="marquee-container">
+          <div class="marquee-track">
+            <!-- First set -->
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(1)"><img src="assets/service_basic.jpg" alt="Temel İtaat Eğitimi" loading="lazy"></a>
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(2)"><img src="assets/service_advanced.jpg" alt="İleri İtaat Eğitimi" loading="lazy"></a>
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(6)"><img src="assets/service_personal_guard.jpg" alt="Kişi Koruma Eğitimi" loading="lazy"></a>
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(7)"><img src="assets/service_sport.jpg" alt="İş ve Spor Köpekleri" loading="lazy"></a>
+            <a href="#about" class="gallery-item"><img src="assets/trainers.jpg" alt="Eğitmenlerimiz" loading="lazy"></a>
+            <a href="#about" class="gallery-item"><img src="assets/trainer_about.jpg" alt="Kurucumuz" loading="lazy"></a>
+            <a href="#gallery" class="gallery-item"><img src="assets/foto_albüm1.jpeg" alt="Eğitim Anı" loading="lazy"></a>
+            <!-- Duplicate for seamless looping -->
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(1)"><img src="assets/service_basic.jpg" alt="Temel İtaat Eğitimi" loading="lazy"></a>
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(2)"><img src="assets/service_advanced.jpg" alt="İleri İtaat Eğitimi" loading="lazy"></a>
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(6)"><img src="assets/service_personal_guard.jpg" alt="Kişi Koruma Eğitimi" loading="lazy"></a>
+            <a href="#services" class="gallery-item" onclick="if(window.goToService) window.goToService(7)"><img src="assets/service_sport.jpg" alt="İş ve Spor Köpekleri" loading="lazy"></a>
+            <a href="#about" class="gallery-item"><img src="assets/trainers.jpg" alt="Eğitmenlerimiz" loading="lazy"></a>
+            <a href="#about" class="gallery-item"><img src="assets/trainer_about.jpg" alt="Kurucumuz" loading="lazy"></a>
+            <a href="#gallery" class="gallery-item"><img src="assets/foto_albüm1.jpeg" alt="Eğitim Anı" loading="lazy"></a>
+          </div>
+        </div>
+      </div>
+
       <!-- Part 2: Hotel Service -->
       <div id="hotel" class="hotel-banner-glass" data-aos="fade-up">
         <img src="assets/hotel_service.webp" alt="Köpek Oteli" class="hotel-bg-img" loading="lazy">
         <div class="hotel-glass-card">
           <h2>Otel Hizmeti</h2>
-          <p>Siz yokken dostlarınız güvende ve huzurlu. Geniş, ferah alanlarımız ve özenli günlük rutinlerimizle köpek otelimizde onlara evlerindeki sıcaklığı ve konforu sunuyoruz. Özel diyetler, oyun saatleri ve 7/24 gözetim ile gözünüz arkada kalmasın.</p>
-          <a href="https://wa.me/905538860237?text=Merhaba,%20k%C3%B6pek%20oteli%20konaklama%20hizmetinizle%20ilgili%20rezervasyon%20ve%20fiyat%20bilgisi%20alabilir%20miyim?" target="_blank" class="btn-glass-dark">Rezervasyon Yap</a>
+          <p>Siz yokken dostlarınız güvende ve huzurlu. Geniş, ferah alanlarımız ve özenli günlük rutinlerimizle köpek otelimizde onlara evlerindeki sıcaklığı ve konforu sunmak için çok yakında hizmetinizdeyiz. Özel diyetler, oyun saatleri ve 7/24 gözetim ile gözünüz arkada kalmayacak.</p>
+          <a href="#hotel" class="btn-glass-dark" style="pointer-events: none; opacity: 0.7; cursor: default;">Çok Yakında</a>
         </div>
       </div>
     </div>
@@ -297,7 +326,11 @@
         </div>
       </div>
 
-      <h2 data-aos="fade-up" class="footer-contact-title">İletişime Geçelim!</h2>
+      <div id="contact-info-section" class="footer-contact-header" data-aos="fade-up">
+        <a href="#hero" class="logo footer-logo"><i class="fas fa-paw"></i><span>Beytullah Çekik</span></a>
+        <h2 class="footer-contact-title">Köpeğiniz hakkında konuşalım</h2>
+        <p class="footer-contact-text">Her köpek farklıdır. Bana bir mesaj gönderin, köpeğinizin neye ihtiyacı olduğunu ve birlikte çalışıp çalışamayacağımızı öğrenmek için 20 dakikalık ücretsiz bir görüşme ayarlayalım.</p>
+      </div>
       <ul class="contact-info" data-aos="fade-up" data-aos-delay="200">
         <li><i class="fas fa-phone"></i> +90 553 886 02 37</li>
         <li><i class="fas fa-map-marker-alt"></i> Menderes, İzmir, Türkiye</li>

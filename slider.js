@@ -163,6 +163,13 @@ mobileTabs.forEach(tab => {
   });
 });
 
+// Expose goToService to window for external links
+window.goToService = function(index) {
+  if (index !== currentActiveIndex) {
+    setActiveIndex(index);
+  }
+};
+
 // Initialize on Load
 document.addEventListener('DOMContentLoaded', () => {
   // Check if we already have the DOM loaded
