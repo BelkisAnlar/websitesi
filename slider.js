@@ -52,7 +52,7 @@ const serviceData = [
                <p><strong>Süreç:</strong> Köpeğin genetik yatkınlığı ve özgüveni incelenir. Sadece gerçek tehditlere karşı reaksiyon vermesi, sahte uyarıcılara tepkisiz kalması ve en önemlisi sahibinin 'Bırak/Dur' komutuyla anında sakinleşmesi öğretilir.</p>`,
     testimonialText: "Fabrikamızın güvenliği için eğittiğimiz Alman Çoban Köpeğimiz, artık yabancıları anında fark edip uyarıyor ama bizim komutumuzla hemen sakinleşiyor. Harika bir denge!",
     testimonialAuthor: "Selim A. (Fabrika Müdürü)",
-    imageSrc: "assets/service_area_guard.webp"
+    imageSrc: "assets/foto_albüm1.jpeg"
   },
   {
     index: 6,
