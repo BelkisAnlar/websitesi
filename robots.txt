@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beytullahcekik.com/sitemap.xml

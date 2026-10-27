@@ -10,6 +10,24 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/favicon-192x192.png">
+  <!-- Schema Markup (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Beytullah Çekik Köpek Eğitimi ve Oteli",
+    "image": "https://beytullahcekik.com/assets/promo_hug_colored.jpg",
+    "url": "https://beytullahcekik.com",
+    "telephone": "+905538860237",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Menderes",
+      "addressRegion": "İzmir",
+      "addressCountry": "TR"
+    },
+    "description": "İzmir'de pozitif pekiştirme yöntemleriyle profesyonel köpek eğitimi, yavru köpek eğitimi, itaat eğitimleri ve köpek oteli hizmetleri."
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -21,10 +39,23 @@
       </a>
       <nav class="main-nav">
         <ul>
-          <li><a href="#about">Hakkımda</a></li>
-          <li><a href="#services">Eğitimlerimiz</a></li>
-          <li><a href="#hotel">Otel (Yakında)</a></li>
-          <li><a href="#footer">İletişim</a></li>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="hakkimda.html">Hakkımda</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)">Eğitimlerimiz</a>
+            <div class="dropdown-content">
+              <a href="yavru-kopek-egitimi.html">Yavru Köpek Eğitimi</a>
+              <a href="temel-itaat-egitimi.html">Temel İtaat Eğitimi</a>
+              <a href="ileri-itaat-egitimi.html">İleri İtaat Eğitimi</a>
+              <a href="tuvalet-egitimi.html">Tuvalet Eğitimi</a>
+              <a href="davranis-bozuklugu-egitimi.html">Davranış Bozukluğu Eğitimi</a>
+              <a href="alan-koruma-egitimi.html">Alan Koruma Eğitimi</a>
+              <a href="kisi-koruma-egitimi.html">Kişi Koruma Eğitimi</a>
+              <a href="is-ve-spor-kopekleri-egitimi.html">İş ve Spor Köpekleri Eğitimi</a>
+            </div>
+          </li>
+          <li><a href="kopek-oteli.html">Otel</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
     </div>
@@ -53,7 +84,7 @@
           <img src="assets/trainer_about.jpg" alt="Köpek Eğitmeni" loading="lazy">
         </div>
         <div class="about-text" data-aos="fade-up" data-aos-delay="200">
-          <h2>Hakkımda</h2>
+          <h2><a href="hakkimda.html" class="about-heading-link" title="Hakkımda sayfasına git">Hakkımda <i class="fas fa-arrow-right"></i></a></h2>
           <p>Köpeklerin dilinden anlamak, onlarla doğru iletişimi kurmak bir sanattır. Yılların getirdiği tecrübe, sabır ve sevgiyle, sadık dostlarınızın daha mutlu, dengeli ve uyumlu bir yaşam sürmesine yardımcı oluyorum.</p>
           <p>Pozitif pekiştirme yöntemlerini merkeze alarak, her köpeğin bireysel karakterine uygun, stresten uzak eğitim programları hazırlıyorum. Amacım sadece komut öğreten değil, aranızdaki bağı güçlendiren kalıcı çözümler sunmaktır.</p>
           <div class="about-badges">
@@ -245,7 +276,7 @@
         <div class="hotel-glass-card">
           <h2>Otel Hizmeti</h2>
           <p>Siz yokken dostlarınız güvende ve huzurlu. Geniş, ferah alanlarımız ve özenli günlük rutinlerimizle köpek otelimizde onlara evlerindeki sıcaklığı ve konforu sunmak için çok yakında hizmetinizdeyiz. Özel diyetler, oyun saatleri ve 7/24 gözetim ile gözünüz arkada kalmayacak.</p>
-          <a href="#hotel" class="btn-glass-dark" style="pointer-events: none; opacity: 0.7; cursor: default;">Çok Yakında</a>
+          <a href="kopek-oteli.html" class="btn-glass-dark">Çok Yakında</a>
         </div>
       </div>
     </div>
@@ -326,23 +357,71 @@
         </div>
       </div>
 
-      <div id="contact-info-section" class="footer-contact-header" data-aos="fade-up">
-        <a href="#hero" class="logo footer-logo"><i class="fas fa-paw"></i><span>Beytullah Çekik</span></a>
-        <h2 class="footer-contact-title">Köpeğiniz hakkında konuşalım</h2>
-        <p class="footer-contact-text">Her köpek farklıdır. Bana bir mesaj gönderin, köpeğinizin neye ihtiyacı olduğunu ve birlikte çalışıp çalışamayacağımızı öğrenmek için 20 dakikalık ücretsiz bir görüşme ayarlayalım.</p>
+      <div class="footer-columns" style="margin-top: 60px;">
+        <!-- Marka & Sosyal Medya -->
+        <div class="footer-col brand-col">
+          <a href="index.html" class="logo footer-logo"><i class="fas fa-paw"></i><span>Beytullah Çekik</span></a>
+          <p class="footer-about-text">İzmir'de pozitif pekiştirme yöntemleriyle profesyonel köpek eğitimi. Dostunuzla aranızdaki bağı teknikle güçlendiriyoruz.</p>
+          <div class="footer-socials">
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="footer-contact-inline">
+            <p><i class="fas fa-phone"></i> +90 553 886 02 37</p>
+            <p><i class="fas fa-map-marker-alt"></i> Menderes, İzmir</p>
+          </div>
+        </div>
+        
+        <!-- Hızlı Menü -->
+        <div class="footer-col">
+          <h4>Menü</h4>
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="kopek-oteli.html">Köpek Oteli</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Eğitimlerimiz -->
+        <div class="footer-col">
+          <h4>Eğitimlerimiz</h4>
+          <ul>
+            <li><a href="yavru-kopek-egitimi.html">Yavru Köpek Eğitimi</a></li>
+            <li><a href="temel-itaat-egitimi.html">Temel İtaat Eğitimi</a></li>
+            <li><a href="ileri-itaat-egitimi.html">İleri İtaat Eğitimi</a></li>
+            <li><a href="tuvalet-egitimi.html">Tuvalet Eğitimi</a></li>
+            <li><a href="davranis-bozuklugu-egitimi.html">Davranış Bozukluğu</a></li>
+            <li><a href="alan-koruma-egitimi.html">Alan Koruma</a></li>
+            <li><a href="kisi-koruma-egitimi.html">Kişi Koruma</a></li>
+            <li><a href="is-ve-spor-kopekleri-egitimi.html">İş ve Spor Köpekleri</a></li>
+          </ul>
+        </div>
+
+        <!-- Yasal -->
+        <div class="footer-col">
+          <h4>Yasal</h4>
+          <ul>
+            <li><a href="gizlilik-politikasi.html">Gizlilik Politikası</a></li>
+            <li><a href="kullanim-kosullari.html">Kullanım Koşulları</a></li>
+            <li><a href="guvenlik-kurallari.html">Güvenlik Kuralları</a></li>
+            <li><a href="cerez-politikasi.html">Çerez Politikası</a></li>
+          </ul>
+        </div>
       </div>
-      <ul class="contact-info" data-aos="fade-up" data-aos-delay="200">
-        <li><i class="fas fa-phone"></i> +90 553 886 02 37</li>
-        <li><i class="fas fa-map-marker-alt"></i> Menderes, İzmir, Türkiye</li>
-      </ul>
+      
+      <div class="footer-legal-bottom">
+        <p>&copy; 2026 Beytullah Çekik Köpek Eğitimi. Tüm hakları saklıdır.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/905538860237?text=Merhaba,%20profesyonel%20k%C3%B6pek%20e%C4%9Fitimi%20ve%20otel%20hizmetleriniz%20hakk%C4%B1nda%20genel%20bilgi%20almak%20istiyorum.%20E%C4%9Fitim%20s%C3%BCre%C3%A7leri%20ve%20%C5%9Fartlar%C4%B1n%C4%B1zla%20ilgili%20g%C3%B6r%C3%BC%C5%9Febilir%20miyiz?" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="500">
+  
+  
+
+    <!-- WhatsApp Button -->
+  <a href="https://wa.me/905538860237" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="500">
     <i class="fab fa-whatsapp"></i> İletişime Geç
   </a>
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
