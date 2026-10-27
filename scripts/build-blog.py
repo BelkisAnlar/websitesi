@@ -25,6 +25,7 @@ footer_html = footer_match.group(1) if footer_match else ""
 def adjust_paths(html):
     html = re.sub(r'href="(?!https?://|#|/|\.\./)(.*?\.html)"', r'href="../\1"', html)
     html = re.sub(r'href="style\.css"', r'href="../style.css"', html)
+    html = re.sub(r'src="nav-dropdown\.js"', r'src="../nav-dropdown.js"', html)
     html = re.sub(r'src="assets/', r'src="../assets/', html)
     html = re.sub(r'href="assets/', r'href="../assets/', html)
     return html

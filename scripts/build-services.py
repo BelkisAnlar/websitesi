@@ -610,6 +610,7 @@ def render_page(data):
   </a>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="nav-dropdown.js"></script>
   <script>
     AOS.init({{ duration: 800, once: true, offset: 100 }});
   </script>
