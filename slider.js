@@ -101,19 +101,11 @@ function updateCenterStage(index) {
     centerImage.alt = data.title;
     centerTitle.innerText = data.title;
     centerLongDesc.innerHTML = data.longDesc;
-    // Update CTA Link to point to the new pages
-    const pageMap = {
-      0: "yavru-kopek-egitimi.html",
-      1: "temel-itaat-egitimi.html",
-      2: "ileri-itaat-egitimi.html",
-      3: "tuvalet-egitimi.html",
-      4: "davranis-bozuklugu-egitimi.html",
-      5: "alan-koruma-egitimi.html",
-      6: "kisi-koruma-egitimi.html",
-      7: "is-ve-spor-kopekleri-egitimi.html"
-    };
-    centerCta.href = pageMap[index] || "iletisim.html";
-    centerCta.innerHTML = '<i class="fas fa-arrow-right"></i> Detayları İncele';
+    
+    // Update WhatsApp CTA Link with dynamic encoded message
+    const encodedMessage = encodeURIComponent(`Merhaba, ${data.title} hakkında detaylı bilgi almak istiyorum.`);
+    centerCta.href = `https://wa.me/905538860237?text=${encodedMessage}`;
+    
     // Remove changing class to trigger fade-in & slide-up animation
     centerStage.classList.remove('changing');
   }, 350); // Matches the CSS transition time of 0.35s
